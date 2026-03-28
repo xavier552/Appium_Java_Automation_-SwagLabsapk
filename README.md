@@ -54,6 +54,42 @@ Appium_Java_Automation_-SwagLabsapk/
 | IntelliJ IDEA | Any | IDE |
 
 ---
+## 🔍 Appium Inspector — Element Identification
+
+Appium Inspector was used during development to identify all locators
+used in `FirstTest.java`. 
+
+### Connection Settings
+| Field         | Value         |
+|---------------|---------------|
+| Remote Host   | 127.0.0.1     |
+| Remote Port   | 4723          |
+| Remote Path   | /             |
+
+### Capabilities used to inspect the SwagLabs app
+{
+  "platformName": "Android",
+  "appium:deviceName": "emulator-5554",
+  "appium:automationName": "UiAutomator2",
+  "appium:app": "/full/path/to/apps/Android.SauceLabs.Mobile.Sample.app.2.7.1.apk"
+}
+
+### Locators identified via Inspector
+
+| Element            | Strategy           | Value                                              |
+|--------------------|--------------------|----------------------------------------------------|
+| Username field     | accessibilityId    | test-Username                                      |
+| Password field     | accessibilityId    | test-Password                                      |
+| Login button       | accessibilityId    | test-LOGIN                                         |
+| ADD TO CART button | androidUIAutomator | text("ADD TO CART").instance(0) / instance(1)      |
+| First Name field   | accessibilityId    | test-First Name                                    |
+| Last Name field    | accessibilityId    | test-Last Name                                     |
+| ZIP field          | accessibilityId    | test-Zip/Postal Code                               |
+| Cart icon          | androidUIAutomator | className("android.widget.ImageView").instance(2)  |
+| Hamburger menu     | androidUIAutomator | className("android.widget.ImageView").instance(0)  |
+| LOGOUT             | xpath              | //android.widget.TextView[@text='LOGOUT']          |
+
+
 
 ## ⚙️ Prerequisites
 
